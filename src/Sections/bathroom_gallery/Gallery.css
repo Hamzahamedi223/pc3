@@ -20,7 +20,7 @@ background-size: cover;
 }
 
 .title_gallery::before {
-  content: "BATHROOM";
+  content: "Bathroom Renovations";
   position: absolute;
   top: 50%; 
   left: 50%; 

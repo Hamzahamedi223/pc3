@@ -6,19 +6,31 @@ import {
   FaUserFriends,
   FaFacebook,
   FaInstagram,
-  FaLinkedin,
   FaYoutube,
   FaHome,
   FaBuilding,
 } from "react-icons/fa";
-import {
-  user1,
+import {Bathroom1,Bathroom2,Bathroom3,Bathroom4,Bathroom5,Bathroom6,Bathroom7,Bathroom8,Bathroom9,bussnies1,bussnies2,bussnies3,bussnies4,bussnies5,bussnies6,outdoor1,about,area,hero,logo,outdoor10,outdoor11,outdoor12,outdoor13,outdoor14,outdoor15,outdoor16,outdoor17,outdoor18,outdoor19,outdoor20,outdoor21,outdoor22,outdoor2,outdoor23,outdoor24,outdoor25,outdoor26,outdoor27,outdoor28,outdoor29,outdoor3,outdoor30,outdoor4,outdoor5,outdoor6,outdoor7,outdoor8,outdoor9
+ , user1,
   user2,
   user3,
   user4,
-  bathroom1,garden2,garden1,bathroom2,
-  kitchen1
+  
 } from "./assets";
+export const bathroomImages = [
+  Bathroom1, Bathroom2, Bathroom3, Bathroom4, Bathroom5, Bathroom6, Bathroom7, Bathroom8, Bathroom9
+];
+
+export const outdoorImages = [
+  outdoor1, outdoor2, outdoor3, outdoor4, outdoor5, outdoor6, outdoor7, outdoor8, outdoor9,
+  outdoor10, outdoor11, outdoor12, outdoor13, outdoor14, outdoor15, outdoor16, outdoor17, outdoor18,
+  outdoor19, outdoor20, outdoor21, outdoor22, outdoor23, outdoor24, outdoor25, outdoor26, outdoor27,
+  outdoor28, outdoor29, outdoor30
+];
+
+export const businessImages = [
+  bussnies1, bussnies2, bussnies3, bussnies4, bussnies5, bussnies6
+];
 
 export const navigations = [
   {
@@ -92,32 +104,32 @@ export const whyChooseUs = [
 export const aboutImages = [
   {
     title: "Modern Bathroom Installation",
-    imageUrl: bathroom1,  
+    imageUrl: Bathroom1,  
     description: "A high-quality bathroom installation with modern fixtures and finishes.",
   },
   {
     title: "Garden Landscaping",
-    imageUrl: garden1, 
+    imageUrl: Bathroom2, 
     description: "A beautifully landscaped garden with custom features and design.",
   },
   {
     title: "Kitchen Renovation",
-    imageUrl: kitchen1,  
+    imageUrl: Bathroom3,  
     description: "A complete kitchen renovation with premium materials and finishes.",
   },
   {
     title: "Modern Bathroom Installation",
-    imageUrl: bathroom1,  
+    imageUrl: Bathroom4,  
     description: "A high-quality bathroom installation with modern fixtures and finishes.",
   },
   {
     title: "Garden Landscaping",
-    imageUrl: garden1, 
+    imageUrl: Bathroom5, 
     description: "A beautifully landscaped garden with custom features and design.",
   },
   {
     title: "Kitchen Renovation",
-    imageUrl: kitchen1,  
+    imageUrl: Bathroom6,  
     description: "A complete kitchen renovation with premium materials and finishes.",
   },
  
