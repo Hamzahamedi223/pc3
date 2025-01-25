@@ -1,0 +1,7 @@
+.Logo__container .icon__container{
+    background: transparent;
+}
+.Logo__container .title{
+    font-size: 1.5rem;
+    font-weight:600;
+}

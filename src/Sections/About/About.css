@@ -1,0 +1,131 @@
+#about {
+  padding: 60px 0;
+  background-color: var(--bg-secondary);
+}
+
+.container-about {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.section__header-about {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section__header-about .title-about {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.section__header-about .description-about {
+  font-size: var(--font-size-base);
+  color: var(--text-muted);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-about {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-carousel-about {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.about-item-about {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-2);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 280px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px; /* Set a fixed height for all items */
+}
+
+.about-item-about:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 20px;
+}
+
+.image-container-about {
+  position: relative;
+  overflow: hidden;
+  height: 50%; /* Half the height of the parent container */
+}
+
+.about-image-about {
+  width: 100%;
+  height: 100%; /* Image fills the entire container */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.details-about {
+  padding: 15px;
+  height: 50%; /* Same height as the image container */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+  text-align: left; /* Align text to the left */
+}
+
+.details-about h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.details-about p {
+  font-size: var(--font-size-small);
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Hover effect on image */
+.image-container-about:hover .about-image-about {
+  transform: scale(1.1);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 930px) {
+  .about-item-about {
+    margin-bottom: 20px;
+    max-width: 45%;
+  }
+
+  .section__header-about .title-about {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-item-about {
+    margin-bottom: 20px;
+    max-width: 90%; /* Make about items take up more space on smaller screens */
+  }
+
+  .about-image-about {
+    height: 200px;
+  }
+
+  .section__header-about .title-about {
+    font-size: 28px;
+  }
+}

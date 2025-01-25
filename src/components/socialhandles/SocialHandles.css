@@ -1,0 +1,8 @@
+.social__handless{
+    align-items: center;
+    gap:5px;
+
+}
+.social__handless .icon__container{
+    border: var(--gray-border)
+}
