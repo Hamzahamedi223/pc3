@@ -30,18 +30,18 @@ export default function Gallery() {
               modules={[EffectCards, Pagination]}
               className="mySwiper"
             >
-              <SwiperSlide>
-                <img src={bathroom1} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={kitchen1} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={bathroom1} />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={kitchen1} />
-              </SwiperSlide>
+               <SwiperSlide>
+                           <img src={bathroom1} alt="1" />
+                         </SwiperSlide>
+                         <SwiperSlide>
+                           <img src={kitchen1}  alt="2"/>
+                         </SwiperSlide>
+                         <SwiperSlide>
+                           <img src={bathroom1} alt="3" />
+                         </SwiperSlide>
+                         <SwiperSlide>
+                           <img src={kitchen1}  alt="4"/>
+                         </SwiperSlide>
             </Swiper>
           </div>
           <div className="text">

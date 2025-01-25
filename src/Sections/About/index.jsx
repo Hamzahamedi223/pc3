@@ -60,14 +60,14 @@ const About = () => {
   effect={'coverflow'}
   grabCursor={true}
   centeredSlides={false}
-  slidesPerView={'3'}
+  slidesPerView={5}
   loop={true}  
   autoplay={{
     delay: 2500, 
     disableOnInteraction: false,  
   }}
   coverflowEffect={{
-    rotate: 80,
+    rotate: 50,
     stretch: 0,
     depth: 100,
     modifier: 1,
