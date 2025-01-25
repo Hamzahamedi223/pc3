@@ -57,21 +57,26 @@ const About = () => {
         </div>
         <div className="about-about">
         <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="about-carousel-about"
-      >
+  effect={'coverflow'}
+  grabCursor={true}
+  centeredSlides={false}
+  slidesPerView={'3'}
+  loop={true}  
+  autoplay={{
+    delay: 2500, 
+    disableOnInteraction: false,  
+  }}
+  coverflowEffect={{
+    rotate: 80,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  }}
+  pagination={true}
+  modules={[EffectCoverflow, Pagination, Autoplay]} 
+  className="about-carousel-about"
+>
             {aboutImages.map((item, index) => (
               <SwiperSlide className="about-item-about" key={index}>
                 <div className="image-container-about">

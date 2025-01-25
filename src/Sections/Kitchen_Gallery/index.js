@@ -1,29 +1,20 @@
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import "swiper/css";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
 import { bathroom1, kitchen1 } from "../../assets";
+
 import "./Gallery.css";
+
 import { EffectCards, Pagination } from "swiper/modules";
 
 export default function Gallery() {
-  const [title, setTitle] = useState("Kitchen2");  // Initialize the title state
-  const titleRef = useRef(null);
-
-  useEffect(() => {
-    if (titleRef.current) {
-      setTitle(titleRef.current.textContent); // Grab title from the h1 element
-    }
-  }, []);
-
   return (
-    <section id="Gallery">
+    <section id="Gallery2">
       <div className="overlay">
-        {/* Set both the visible text and the dynamic title */}
-        <h1 ref={titleRef} className="title_gallery" data-title={title}>
-          {title}
-        </h1>
+        <h1 className="title_gallery2">Kitchen</h1>
         <div className="container">
           <div className="cubeimg">
             <Swiper
@@ -40,16 +31,16 @@ export default function Gallery() {
               className="mySwiper"
             >
               <SwiperSlide>
-                <img src={bathroom1} alt="Bathroom 1" />
+                <img src={bathroom1} />
               </SwiperSlide>
               <SwiperSlide>
-                <img src={kitchen1} alt="Kitchen 1" />
+                <img src={kitchen1} />
               </SwiperSlide>
               <SwiperSlide>
-                <img src={bathroom1} alt="Bathroom 2" />
+                <img src={bathroom1} />
               </SwiperSlide>
               <SwiperSlide>
-                <img src={kitchen1} alt="Kitchen 2" />
+                <img src={kitchen1} />
               </SwiperSlide>
             </Swiper>
           </div>

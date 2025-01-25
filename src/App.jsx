@@ -6,9 +6,9 @@ import Contact from "./Sections/Contact";
 import Footer from "./Sections/Footer";
 import "swiper/css";
 import About  from "./Sections/About";
-import Gallery from "./Sections/Gallery";
-import Gallery1 from "./Sections/Gallery/index2";
-import Gallery2 from "./Sections/Gallery/index3";
+import Gallery from "./Sections/Kitchen_Gallery";
+import Gallery1 from "./Sections/garden_gallery/index2";
+import Gallery2 from "./Sections/bathroom_gallery/index3";
 
 function App() {
   return (
