@@ -42,10 +42,6 @@ export const navigations = [
     to: "services",
   },
   {
-    label: "Gallery",
-    to: "gallery",
-  },
-  {
     label: "About Us",
     to: "about",
   },
