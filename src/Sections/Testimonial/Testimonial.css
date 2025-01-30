@@ -37,4 +37,8 @@
     #testimonials .container{
         grid-template-columns: 100%;
     }
+    #testimonials .testimonial__card{
+        max-height: 80%;
+        overflow-y: auto;
+    }
 }
