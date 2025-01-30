@@ -59,24 +59,32 @@ const About = () => {
         </div>
         <div className="about-about">
         <Swiper
+  effect={'coverflow'}
   grabCursor={true}
+  centeredSlides={true} // Prevent misalignment
   loop={true}
   autoplay={{
     delay: 2500,
     disableOnInteraction: false,
   }}
+  coverflowEffect={{
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  }}
   pagination={{ clickable: true }}
-  modules={[Pagination, Autoplay]} // Removed the EffectCoverflow module here
+  modules={[EffectCoverflow, Pagination, Autoplay]}
   className="about-carousel-about"
   breakpoints={{
-    1200: { slidesPerView: 5, spaceBetween: 20 },
-    930: { slidesPerView: 3, spaceBetween: 15 },
-    600: { slidesPerView: 2, spaceBetween: 10 },
-    400: { slidesPerView: 1, spaceBetween: 10, centeredSlides: true },
-    300: { slidesPerView: 1, spaceBetween: 0, centeredSlides: true },
+    1200: { slidesPerView: 5, spaceBetween: 20 }, 
+    930: { slidesPerView: 3, spaceBetween: 15 },  
+    600: { slidesPerView: 2, spaceBetween: 10 },  
+    400: { slidesPerView: 1.3, spaceBetween: 10 }, 
+    300: { slidesPerView: 1, spaceBetween: 0 }, 
   }}
 >
-
 
 
             {aboutImages.map((item, index) => (
