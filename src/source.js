@@ -14,7 +14,7 @@ import {Bathroom1,Bathroom2,Bathroom3,Bathroom4,Bathroom5,Bathroom6,Bathroom7,Ba
  , user1,
   user2,
   user3,
-  user4,
+  user4,kitchen
   
 } from "./assets";
 export const bathroomImages = [
@@ -105,12 +105,12 @@ export const aboutImages = [
   },
   {
     title: "Garden Landscaping",
-    imageUrl: Bathroom2, 
+    imageUrl: outdoor1, 
     description: "A beautifully landscaped garden with custom features and design.",
   },
   {
     title: "Kitchen Renovation",
-    imageUrl: Bathroom3,  
+    imageUrl: kitchen,  
     description: "A complete kitchen renovation with premium materials and finishes.",
   },
   {
@@ -119,15 +119,36 @@ export const aboutImages = [
     description: "A high-quality bathroom installation with modern fixtures and finishes.",
   },
   {
+    title: "Garden",
+    imageUrl: outdoor2, 
+    description: "A beautifully landscaped garden with custom features and design.",
+  },
+  {
+    title: "Modern Bathroom Installation",
+    imageUrl: Bathroom1,  
+    description: "A high-quality bathroom installation with modern fixtures and finishes.",
+  },
+  {
     title: "Garden Landscaping",
-    imageUrl: Bathroom5, 
+    imageUrl: outdoor1, 
     description: "A beautifully landscaped garden with custom features and design.",
   },
   {
     title: "Kitchen Renovation",
-    imageUrl: Bathroom6,  
+    imageUrl: kitchen,  
     description: "A complete kitchen renovation with premium materials and finishes.",
   },
+  {
+    title: "Modern Bathroom Installation",
+    imageUrl: Bathroom4,  
+    description: "A high-quality bathroom installation with modern fixtures and finishes.",
+  },
+  {
+    title: "Garden",
+    imageUrl: outdoor2, 
+    description: "A beautifully landscaped garden with custom features and design.",
+  },
+ 
  
 ];
 

@@ -53,6 +53,8 @@ export { default as bussnies3 } from "./bussnies/16.jpeg";
 export { default as bussnies4 } from "./bussnies/17.jpeg";
 export { default as bussnies5 } from "./bussnies/18.jpeg";
 export { default as bussnies6 } from "./bussnies/18.jpeg";
+export { default as kitchen } from "./kitchen.jpg";
+
 
 
 
