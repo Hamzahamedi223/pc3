@@ -145,7 +145,7 @@ export const aboutImages = [
   },
   {
     title: "Garden",
-    imageUrl: outdoor2, 
+    imageUrl: outdoor29, 
     description: "A beautifully landscaped garden with custom features and design.",
   },
  
