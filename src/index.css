@@ -48,7 +48,7 @@
   --bg-secondary:#171719;
   --bg-secondary-rgb:23, 23, 25;
   --bg-overlay-rgb:10, 10, 12;
-  --gray-border:1px solid rgba(89, 88, 88, 0.633);
+  --gray-border:1px solid rgba(89, 88, 88, 0.295);
 }
 
 
@@ -199,7 +199,7 @@ textarea {
   overflow: hidden;
 }
 .overlay {
-  background: rgba(var(--bg-overlay-rgb), 0.9);
+  background: rgba(var(--bg-overlay-rgb), 0.4);
 }
 
 .blur__effect {
