@@ -17,16 +17,11 @@ export { default as Bathroom6 } from "./Bathroom/34.jpeg";
 export { default as Bathroom7 } from "./Bathroom/45.jpeg";
 
 export { default as outdoor1 } from "./outdoor/1.jpeg";
-export { default as outdoor2 } from "./outdoor/11.jpeg";
-export { default as outdoor3 } from "./outdoor/12.jpeg";
-export { default as outdoor4 } from "./outdoor/19.jpeg";
+
 export { default as outdoor5 } from "./outdoor/20.jpeg";
-export { default as outdoor6 } from "./outdoor/21.jpeg";
-export { default as outdoor7 } from "./outdoor/22.jpeg";
+
 export { default as outdoor8 } from "./outdoor/23.jpeg";
-export { default as outdoor9 } from "./outdoor/24.jpeg";
-export { default as outdoor10 } from "./outdoor/25.jpeg";
-export { default as outdoor11 } from "./outdoor/27.jpeg";
+
 export { default as outdoor12 } from "./outdoor/28.jpeg";
 export { default as outdoor13 } from "./outdoor/32.jpeg";
 export { default as outdoor14 } from "./outdoor/36.jpeg";
@@ -35,7 +30,6 @@ export { default as outdoor16 } from "./outdoor/38.jpeg";
 export { default as outdoor17 } from "./outdoor/39.jpeg";
 export { default as outdoor18 } from "./outdoor/40.jpeg";
 export { default as outdoor19 } from "./outdoor/41.jpeg";
-export { default as outdoor20 } from "./outdoor/48.jpeg";
 export { default as outdoor21 } from "./outdoor/49.jpeg";
 export { default as outdoor22 } from "./outdoor/50.jpeg";
 export { default as outdoor23 } from "./outdoor/51.jpeg";
