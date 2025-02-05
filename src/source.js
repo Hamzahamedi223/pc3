@@ -26,7 +26,7 @@ export const bathroomImages = [
 
 export const outdoorImages = [
   outdoor1,  outdoor5,  outdoor8, 
-   outdoor12, outdoor13, outdoor14, outdoor15, outdoor16, outdoor17, outdoor18,
+   outdoor12, outdoor13, outdoor15,  outdoor18,
   outdoor19,  outdoor21, outdoor22, outdoor23, outdoor24, outdoor25, outdoor26, outdoor27,
   outdoor28, outdoor29, outdoor30
 ];

@@ -24,10 +24,7 @@ export { default as outdoor8 } from "./outdoor/23.jpeg";
 
 export { default as outdoor12 } from "./outdoor/28.jpeg";
 export { default as outdoor13 } from "./outdoor/32.jpeg";
-export { default as outdoor14 } from "./outdoor/36.jpeg";
 export { default as outdoor15 } from "./outdoor/37.jpeg";
-export { default as outdoor16 } from "./outdoor/38.jpeg";
-export { default as outdoor17 } from "./outdoor/39.jpeg";
 export { default as outdoor18 } from "./outdoor/40.jpeg";
 export { default as outdoor19 } from "./outdoor/41.jpeg";
 export { default as outdoor21 } from "./outdoor/49.jpeg";
