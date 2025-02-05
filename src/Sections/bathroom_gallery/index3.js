@@ -15,7 +15,7 @@ export default function Gallery3() {
       <div className="overlay">
         <h1 className="title_gallery">Bathroom Renovations</h1>
         <div className="container">
-          <div className="cubeimg">
+          <div>
             <Swiper
               effect={"cards"}
               grabCursor={true}

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { FaArrowRight, FaStar } from "react-icons/fa";
 import { Link } from "react-scroll";
 import { testimonials } from "../../source";
@@ -8,11 +8,14 @@ import "./Testimonial.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import emailjs from "@emailjs/browser"; // Use the same import as in your first code
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Testimonial = () => {
   const container = useRef();
+  const [showForm, setShowForm] = useState(false);
+  const reviewForm = useRef(); // Reference for the review form
 
   useGSAP(
     () => {
@@ -50,19 +53,47 @@ const Testimonial = () => {
     { scope: container }
   );
 
+  // EmailJS function for review submission
+  const sendReview = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_y9g2szk", // Your EmailJS service ID
+        "template_g73lfnu", // Your EmailJS review template ID
+        reviewForm.current, // Reference to the form
+        "OKw0E-U3qNWJvJQVs" // Your EmailJS public key
+      )
+      .then(
+        (result) => {
+          console.log("Review Sent Successfully!", result.text);
+          alert("Your review has been submitted for approval!");
+          setShowForm(false); // Close the form after submission
+        },
+        (error) => {
+          console.log("Failed to send review...", error.text);
+          alert("Error submitting review, please try again.");
+        }
+      );
+  };
+
   return (
     <section id="testimonials" ref={container}>
       <div className="container">
         <div className="section__header">
           <h3 className="title">Testimonials</h3>
           <p className="description">
-          Hear from our satisfied clients who share their experiences and success stories with us.
+            Hear from our satisfied clients who share their experiences and success stories with us.
           </p>
           <Link to="contact" className="btn primary">
             Let's talk now
             <FaArrowRight />
           </Link>
+          <button className="btn secondary Review" onClick={() => setShowForm(true)}>
+            Leave a Review
+          </button>
         </div>
+
         <div>
           <Swiper
             grabCursor={true}
@@ -80,9 +111,7 @@ const Testimonial = () => {
             {testimonials.map((item, index) => (
               <SwiperSlide className="testimonial__card" key={index}>
                 <div className="flex top">
-                  <div className="profile">
-                    <img src={item.image} alt="profile img" />
-                  </div>
+                
                   <div className="details">
                     <h4>{item.name}</h4>
                     <div className="flex star__container">
@@ -102,6 +131,24 @@ const Testimonial = () => {
             ))}
           </Swiper>
         </div>
+
+        {/* Review submission popup */}
+        {showForm && (
+          <div className="popup">
+            <div className="popup-inner">
+              <h3>Submit Your Review</h3>
+              <form ref={reviewForm} onSubmit={sendReview}>
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="text" name="task" placeholder="Task Performed" required />
+                <textarea name="review" placeholder="Your Review" required />
+                <button type="submit">Submit for Approval</button>
+                <button type="button" className="close-btn" onClick={() => setShowForm(false)}>
+                  Close
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

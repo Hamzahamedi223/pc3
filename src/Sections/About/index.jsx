@@ -52,10 +52,12 @@ const About = () => {
         <div className="section__header-about">
           <h3 className="title-about">About us</h3>
           <p className="description-about">
-            Explore our curated collection of civil engineering projects. Browse
+          Hello, I am H. Turki, a civil engineer with extensive experience in building and groundwork. After working with various companies in France and the UK, I decided to establish my own company, COMFOROOMS LTD. I am supported by a dedicated and skilled team that shares my commitment to high-quality work. We take great pride in our jobs, always respecting our customers and striving to deliver results that are both clean and professional. As the director of COMFOROOMS LTD, I personally guarantee satisfaction with every project, and we offer a warranty for all the work we complete. I look forward to hearing from you soon.
+          </p><br/><p classname="test1about"> Explore our curated collection of civil engineering projects. Browse
             through our recent works and see the impact of thoughtful design and
             innovation.
-          </p>
+            </p>
+         
         </div>
         <div className="about-about">
         <Swiper

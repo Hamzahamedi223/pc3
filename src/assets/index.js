@@ -15,8 +15,7 @@ export { default as Bathroom4 } from "./Bathroom/31.jpeg";
 export { default as Bathroom5 } from "./Bathroom/33.jpeg";
 export { default as Bathroom6 } from "./Bathroom/34.jpeg";
 export { default as Bathroom7 } from "./Bathroom/45.jpeg";
-export { default as Bathroom8 } from "./Bathroom/46.jpeg";
-export { default as Bathroom9 } from "./Bathroom/47.jpeg";
+
 export { default as outdoor1 } from "./outdoor/1.jpeg";
 export { default as outdoor2 } from "./outdoor/11.jpeg";
 export { default as outdoor3 } from "./outdoor/12.jpeg";
@@ -54,6 +53,20 @@ export { default as bussnies4 } from "./bussnies/17.jpeg";
 export { default as bussnies5 } from "./bussnies/18.jpeg";
 export { default as bussnies6 } from "./bussnies/18.jpeg";
 export { default as kitchen } from "./kitchen.jpg";
+export { default as extension1 } from "./Extensions/1.jpeg";
+export { default as extension2 } from "./Extensions/2.jpeg";
+export { default as extension3 } from "./Extensions/3.jpeg";
+export { default as extension4 } from "./Extensions/4.jpeg";
+export { default as extension5 } from "./Extensions/5.jpeg";
+export { default as extension6 } from "./Extensions/6.jpeg";
+export { default as extension7 } from "./Extensions/7.jpeg";
+export { default as commercial1 } from "./comercial-project/1.jpeg";
+export { default as commercial2 } from "./comercial-project/2.jpeg";
+export { default as commercial3 } from "./comercial-project/3.jpeg";
+
+
+
+
 
 
 

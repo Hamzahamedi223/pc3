@@ -5,13 +5,17 @@ import { MdOutlineAlternateEmail } from "react-icons/md";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import emailjs from "@emailjs/browser"; // Import EmailJS
 import "./Contact.css";
-import {area} from "../../assets"
+import { area } from "../../assets";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   const container = useRef();
+  const form = useRef(); // Add reference to form
 
+  // GSAP animation (unchanged)
   useGSAP(
     () => {
       const tl = gsap.timeline({
@@ -49,68 +53,91 @@ const Contact = () => {
     { scope: container }
   );
 
+  // EmailJS function
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    // Send the form data using emailjs
+    emailjs
+      .sendForm(
+        "service_y9g2szk", // Replace with your EmailJS service ID
+        "template_gleiffr", // Replace with your EmailJS template ID
+        form.current, // Reference to the form
+        "OKw0E-U3qNWJvJQVs" // Replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          alert("There was an error sending your message.");
+        }
+      );
+  };
+
   return (
     <section id="contact" ref={container}>
-    <div className="container">
-      <form className="form">
-        <div className="form__top">
-          <h3 className="sub__heading">Get in Touch</h3>
-          <p className="muted">
-          Get in touch with us for any inquiries or support. We're here to help with
-  any questions you may have or assistance you need. Feel free to reach out,
-  and we'll get back to you as soon as possible.
-          </p>
-        </div>
-        <div className="form__middle">
-          <input type="text" placeholder="Full name" name="fullName" className="control" />
-          <input type="email" placeholder="Email address" name="email" className="control" />
-          <input type="tel" placeholder="Phone number" name="phoneNumber" className="control" />
-          <textarea name="message" placeholder="Your message" className="control"></textarea>
-        </div>
-        <div className="form__bottom">
-          <button className="btn primary">Send Message</button>
-        </div>
-      </form>
-      <div className="contact__infos">
-        <div className="flex contact__info">
-          <div className="flex__center icon__container">
-            <MdOutlineAlternateEmail />
-          </div>
-          <div className="details">
-            <h4>Email Us</h4>
-            <p className="muted">Fast and reliable service</p>
-            <p>
-              <a href="mailto:comforooms@yahoo.com">comforooms@yahoo.com</a>
+      <div className="container">
+        <form className="form" ref={form} onSubmit={sendEmail}> {/* Add onSubmit handler */}
+          <div className="form__top">
+            <h3 className="sub__heading">Get in Touch</h3>
+            <p className="muted">
+              Get in touch with us for any inquiries or support. We're here to help with
+              any questions you may have or assistance you need. Feel free to reach out,
+              and we'll get back to you as soon as possible.
             </p>
           </div>
-        </div>
-        <div className="flex contact__info">
-          <div className="flex__center icon__container">
-            <FaLocationCrosshairs />
+          <div className="form__middle">
+            <input type="text" placeholder="Full name" name="fullName" className="control" />
+            <input type="email" placeholder="Email address" name="email" className="control" />
+            <input type="tel" placeholder="Phone number" name="phoneNumber" className="control" />
+            <textarea name="message" placeholder="Your message" className="control"></textarea>
           </div>
-          <div className="details">
-            <h4>Our Address</h4>
-            <p className="muted">Come visit us in our office</p>
-            <p><sup></sup>London</p>
+          <div className="form__bottom">
+            <button type="submit" className="btn primary">Send Message</button> {/* Add type="submit" */}
           </div>
-        </div>
-        <div className="flex contact__info">
-          <div className="flex__center icon__container">
-            <FiPhoneCall />
+        </form>
+        <div className="contact__infos">
+          <div className="flex contact__info">
+            <div className="flex__center icon__container">
+              <MdOutlineAlternateEmail />
+            </div>
+            <div className="details">
+              <h4>Email Us</h4>
+              <p className="muted">Fast and reliable service</p>
+              <p>
+                <a href="mailto:comforooms@yahoo.com">comforooms@yahoo.com</a>
+              </p>
+            </div>
           </div>
-          <div className="details">
-            <h4>Phone Number</h4>
-            <p className="muted">Give us a call</p>
-            <p>07856139957</p>
+          <div className="flex contact__info">
+            <div className="flex__center icon__container">
+              <FaLocationCrosshairs />
+            </div>
+            <div className="details">
+              <h4>Our Address</h4>
+              <p className="muted">Come visit us in our office</p>
+              <p>London</p>
+            </div>
           </div>
-        </div>
-        <div className="contact__area">
-          <img className="area" src={area} alt="Area Map" />
+          <div className="flex contact__info">
+            <div className="flex__center icon__container">
+              <FiPhoneCall />
+            </div>
+            <div className="details">
+              <h4>Phone Number</h4>
+              <p className="muted">Give us a call</p>
+              <p>07856139957</p>
+            </div>
+          </div>
+          <div className="contact__area">
+            <img className="area" src={area} alt="Area Map" />
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  
+    </section>
   );
 };
 

@@ -19,6 +19,7 @@
 #testimonials .testimonial__card .top{
     gap: 10px;
 }
+
 #testimonials .testimonial__card .star__container{
     color: var(--primary);
     align-items: center;
@@ -42,3 +43,74 @@
         overflow-y: auto;
     }
 }
+.popup {
+   position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .popup-inner {
+    background: white;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .popup-inner input,
+  .popup-inner textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .popup-inner button {
+    margin: 10px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .close-btn {
+    background: var(--primary);
+    color: white;
+  }
+
+.btn{
+    margin-top: 8px;
+}
+.btn.Review {
+  margin-left: 20px;
+  font-weight: bold;
+  min-width: 140px; 
+}
+@media (max-width: 768px) {
+    .btn.Review {
+      min-width: 120px; /* Slightly smaller button */
+      font-size: 14px;
+      padding: 8px 12px;
+      margin-left: 10px; /* Adjust spacing for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .btn.Review {
+      min-width: 100px; /* Even smaller for mobile */
+      font-size: 12px;
+      padding: 6px 10px;
+      margin-left: 5px; /* Adjust spacing */
+    }
+  }
