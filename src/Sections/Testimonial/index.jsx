@@ -111,7 +111,9 @@ const Testimonial = () => {
             {testimonials.map((item, index) => (
               <SwiperSlide className="testimonial__card" key={index}>
                 <div className="flex top">
-                
+                  {/* <div className="profile">
+                    <img src={item.image} alt="profile img" />
+                  </div> */}
                   <div className="details">
                     <h4>{item.name}</h4>
                     <div className="flex star__container">
